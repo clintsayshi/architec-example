@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            // ...
+            colors: {
+              cta: "#ffcb06",
+              "text-bg": "#fff3d6",
+            },
+            container: {
+              padding: "1rem",
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.8.1/dist/cdn.min.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="relative">
+      <nav class="container mx-auto flex items-center justify-between">
+        <a class="py-4 flex items-center space-x-1" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span class="text-lg font-medium uppercase">Builders</span>
+        </a>
+
+        <ul class="hidden sm:inline-flex space-x-4">
+          <li>
+            <a
+              class="text-base font-medium text-gray-600 hover:text-black transition-colors"
+              href="#"
+              >Our Work</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-base font-medium text-gray-600 hover:text-black transition-colors"
+              href="#"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-base font-medium text-gray-600 hover:text-black transition-colors"
+              href="#"
+              >Pricing</a
+            >
+          </li>
+        </ul>
+
+        <a
+          class="hidden px-4 py-3 sm:inline-flex items-center space-x-1 bg-cta"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="p-0 h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+            />
+          </svg>
+          <small class="leading-none text-base font-medium capitalize"
+            >Contact us</small
+          >
+        </a>
+
+        <button class="sm:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 8h16M4 16h16"
+            />
+          </svg>
+        </button>
+      </nav>
+      <div
+        class="hidden hover:opacity-100 hover:translate-y-0 pointer-events-auto"
+      ></div>
+      <ul
+        class="container mx-auto absolute top-full left-0 right-0 py-6 space-y-4 text-center bg-slate-50 transform -translate-y-40 transition-all duration-500 opacity-0 pointer-events-none"
+      >
+        <li>
+          <a class="text-lg font-medium" href="#">Our Work</a>
+        </li>
+        <li>
+          <a class="text-lg font-medium" href="#">Services</a>
+        </li>
+        <li>
+          <a class="text-lg font-medium" href="#">Pricing</a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="px-4 py-3 inline-flex items-center space-x-1 bg-cta"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="p-0 h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+              />
+            </svg>
+            <small class="leading-none text-base font-medium capitalize"
+              >Contact us</small
+            >
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <section
+      class="container mx-auto mb-8 py-4 sm:py-10 flex flex-col-reverse gap-8 sm:flex-row"
+    >
+      <div class="space-y-6">
+        <h1 class="text-4xl font-normal leading-snug">
+          We
+          <span
+            class="bg-text-bg font-bold px-[0.2rem] py-[0.05rem] leading-none"
+            >Plan, Design</span
+          >
+          and <span class="capitalize">Oversees construction</span> of your
+          <span
+            class="bg-emerald-50 capitalize font-bold px-[0.2rem] py-[0.05rem] leading-none"
+            >buildings</span
+          >
+        </h1>
+
+        <p>
+          The design of buildings and the space within the site surrounding the
+          buildings that have human occupancy or use as their principal purpose.
+        </p>
+
+        <a
+          href="#"
+          class="block w-max px-4 py-3 leading-none text-base font-medium capitalize bg-cta"
+        >
+          Make schedule to talk
+        </a>
+      </div>
+
+      <div class="relative w-full h-72 sm:h-auto bg-amber-500">
+        <div
+          class="absolute bottom-4 right-4 w-max px-4 py-3 flex items-center gap-3 bg-white bg-opacity-50"
+        >
+          <div class="bg-amber-500 p-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-8 w-8"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-medium">100+</h3>
+            <p class="text-sm font-medium leading-none">Projects completed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container mx-auto p-6 bg-slate-100">
+        <header class="pb-3 flex justify-between items-center">
+          <h2 class="text-xl sm:text-2xl font-medium capitalize">
+            Our latest Architectures
+          </h2>
+          <a class="flex items-center space-x-2" href="#">
+            <span class="text-sm capitalize font-medium">View all</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 text-gray-700"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
+        </header>
+
+        <div class="flex flex-col sm:flex-row gap-6 items-start">
+          <article class="w-full h-56 bg-amber-500"></article>
+          <article class="w-full h-56 bg-emerald-500"></article>
+          <article class="w-full h-56 bg-slate-500"></article>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
