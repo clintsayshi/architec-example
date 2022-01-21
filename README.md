@@ -1,5 +1,3 @@
-# architec-example
-
 # BUILDERS Architecture Website Landing page
 
 Design by Rajan Raj
