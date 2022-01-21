@@ -30,7 +30,7 @@
     />
   </head>
   <body>
-    <header class="relative">
+    <header x-data="{open : false}" class="relative">
       <nav class="container mx-auto flex items-center justify-between">
         <a class="py-4 flex items-center space-x-1" href="#">
           <svg
@@ -94,13 +94,18 @@
           >
         </a>
 
-        <button class="sm:hidden">
+        <button
+          data-btn-toggle
+          @click="open = ! open"
+          class="sm:hidden transition-all duration-100"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
+            x-show="!open"
           >
             <path
               stroke-linecap="round"
@@ -109,13 +114,29 @@
               d="M4 8h16M4 16h16"
             />
           </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            x-show="open"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         </button>
       </nav>
       <div
         class="hidden hover:opacity-100 hover:translate-y-0 pointer-events-auto"
       ></div>
       <ul
-        class="container mx-auto absolute top-full left-0 right-0 py-6 space-y-4 text-center bg-slate-50 transform -translate-y-40 transition-all duration-500 opacity-0 pointer-events-none"
+        data-mobile-menu
+        class="container mx-auto z-20 absolute top-full left-0 right-0 py-6 space-y-4 text-center bg-white transform -translate-y-40 transition-all duration-500 opacity-0 pointer-events-none"
       >
         <li>
           <a class="text-lg font-medium" href="#">Our Work</a>
@@ -241,5 +262,16 @@
         </div>
       </div>
     </section>
+
+    <script>
+      const menu = document.querySelector("[data-mobile-menu]");
+      const btn = document.querySelector("[data-btn-toggle]");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("opacity-100");
+        menu.classList.toggle("translate-y-0");
+        menu.classList.toggle("pointer-events-auto");
+      });
+    </script>
   </body>
 </html>
